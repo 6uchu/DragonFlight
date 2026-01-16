@@ -1,4 +1,35 @@
-echo "* text=auto" > .gitattributes
+# 모든 텍스트 파일 LF 통일
+* text=auto eol=lf
+
+# C# 소스코드
+*.cs text eol=lf
+
+# Unity Meta 파일
 *.meta text eol=lf
-git add --renormalize .
-git commit -m "Normalize line endings for .meta files"
+
+# 텍스트 기반 리소스
+*.txt text eol=lf
+*.shader text eol=lf
+*.cginc text eol=lf
+*.json text eol=lf
+*.asmdef text eol=lf
+*.asmref text eol=lf
+*.uxml text eol=lf
+*.uss text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# 바이너리 파일은 변환하지 않음
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.psd binary
+*.fbx binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.mp4 binary
+*.mov binary
+*.unitypackage binary
