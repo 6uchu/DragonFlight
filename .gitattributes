@@ -1,3 +1,4 @@
 echo "* text=auto" > .gitattributes
+*.meta text eol=lf
 git add --renormalize .
-git commit -m "Normalize line endings"
+git commit -m "Normalize line endings for .meta files"
