@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 3f;
     void Start()
     {
-        
+        SingletonTest.instance.PlayerSound();
     }
 
     // Update is called once per frame
@@ -19,5 +19,13 @@ public class Player : MonoBehaviour
 
         //이동
         transform.Translate(dir * moveSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
