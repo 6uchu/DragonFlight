@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -19,5 +20,7 @@ public class GameManager : MonoBehaviour
     {
         totalScore += a;
         scoreText.text = "점수: " + totalScore;
+        if(totalScore >= 1000)
+            SceneManager.LoadScene(1);
     }
 }
