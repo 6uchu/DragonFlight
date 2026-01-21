@@ -2,26 +2,42 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    public float speed = 2.0f;
+    public GameObject explosionEffect;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SingletonTest.instance.EnemySound();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //이동
-        transform.Translate(0 ,-1 * moveSpeed * Time.deltaTime, 0);
+        float distanceY = -speed * Time.deltaTime;
+        transform.Translate(0, distanceY, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if (collision.CompareTag("Bullet"))
         {
-            SoundManager.Instance.SoundDie();
+            SoundManager.instance.SoundDie();
+
+            Destroy(gameObject);
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+
+            GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+
+            GameManager.instance.AddScore(100);
+        }
+
+        if(collision.CompareTag("Player"))
+        {
+            SoundManager.instance.SoundDie();
+            Destroy(collision.gameObject);
+            GameObject effect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
         }
     }
 }

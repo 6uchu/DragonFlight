@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public bool ebabkeSpawn = false;
+    public static SpawnManager instance;
     public GameObject enemy;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1, 1f);
+        InvokeRepeating("SpawnEnemy", 2.0f, 1.5f);
     }
 
-    public void SpawnEnemy()
+
+    void SpawnEnemy()
     {
-        float randomX = Random.Range(-1.8f, 1.8f);
-        if (ebabkeSpawn)
-        {
-            Instantiate(enemy, new Vector3(randomX, transform.position.y, 0), Quaternion.identity);
-        }
+        Instantiate(enemy, new Vector3(Random.Range(-1.9f, 1.9f), 6f, 0), Quaternion.identity);
     }
 }

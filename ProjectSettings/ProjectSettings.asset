@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 472b225bd556e984b8841cae7634ec7d
+  productGUID: f7bd958bc4f7db3458284754a5490996
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: DragonFlyy
+  productName: prac
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -828,14 +828,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: DragonFlyy
+  metroPackageName: prac
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: DragonFlyy
+  metroApplicationDescription: prac
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -906,10 +906,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: a191f0d2-e615-4c91-92e1-83d98bccc7ef
+  cloudProjectId: eb3e404f-89d2-49eb-911e-95978546159c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: DragonFlyy
+  projectName: prac
   organizationId: buchu2210
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
